@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalable Growth Systems | Commercial Diplomacy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#1e293b', 900: '#0f172a', 950: '#020617' },
+                        brand: { cyan: '#06b6d4', green: '#10b981' }
+                    },
+                    fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
+        .gradient-text { background: linear-gradient(to right, #06b6d4, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-active { color: #06b6d4; }
+        /* Hide sections by default, show active */
+        .page-section { display: none; animation: fadeIn 0.5s ease-in-out; }
+        .page-section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold font-heading tracking-tight cursor-pointer" onclick="showPage('home')">
+                SCALABLE<span class="text-brand-cyan">GROWTH</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300 uppercase tracking-widest">
+                <button onclick="showPage('home')" id="nav-home" class="hover:text-brand-cyan transition-colors nav-active">Home</button>
+                <button onclick="showPage('services')" id="nav-services" class="hover:text-brand-cyan transition-colors">Services</button>
+                <button onclick="showPage('about')" id="nav-about" class="hover:text-brand-cyan transition-colors">About</button>
+            </div>
+            <a href="mailto:contact@scalablegrowth.io" class="bg-brand-cyan hover:bg-cyan-600 text-slate-950 font-bold py-2 px-6 rounded-full transition-all text-sm">
+                Book Discovery Call
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow pt-20">
+
+        <!-- ==================== HOME PAGE ==================== -->
+        <div id="home" class="page-section active">
+            <!-- Hero Section -->
+            <header class="relative pt-20 pb-20 lg:pt-32 lg:pb-32 overflow-hidden">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-cyan rounded-full blur-[120px]"></div>
+                    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-green rounded-full blur-[120px]"></div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+                    <div class="inline-block mb-6 px-4 py-1.5 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-xs font-bold tracking-[0.2em] text-brand-cyan uppercase">
+                        Strategic Partnerships & Trade Architecture
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-[1.1] tracking-tight font-heading">
+                        The Commercial Diplomat<br>
+                        <span class="gradient-text">For the Europe-Africa Corridor</span>
+                    </h1>
+                    <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                        We replace the inefficient "cold sales" model with Ecosystem-Led Growth. 
+                        We identify high-leverage partners, structure the legal agreements, and bridge the gap between 
+                        <span class="text-brand-cyan font-semibold">European Capital</span> and <span class="text-brand-green font-semibold">African Growth</span>.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="showPage('services')" class="bg-white text-slate-950 hover:bg-slate-200 font-bold py-4 px-10 rounded-full transition-all shadow-lg shadow-white/5">
+                            View Core Pillars
+                        </button>
+                        <button onclick="showPage('about')" class="border border-slate-700 hover:border-brand-green hover:text-brand-green bg-slate-900/50 text-white font-bold py-4 px-10 rounded-full transition-all">
+                            Meet the Partner
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Value Prop Grid -->
+            <section class="py-20 bg-slate-950 border-t border-slate-900">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
+                            <div class="w-12 h-12 mx-auto bg-brand-cyan/10 rounded-full flex items-center justify-center text-brand-cyan text-xl mb-4"><i class="fa-solid fa-gavel"></i></div>
+                            <h3 class="text-lg font-bold text-white mb-2">Legal Rigour</h3>
+                            <p class="text-slate-400 text-sm">We don't just advise; we draft and redline. We handle compliance and contracts so deals don't die in legal limbo.</p>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
+                            <div class="w-12 h-12 mx-auto bg-brand-green/10 rounded-full flex items-center justify-center text-brand-green text-xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3 class="text-lg font-bold text-white mb-2">Commercial Strategy</h3>
+                            <p class="text-slate-400 text-sm">We model the unit economics of every partnership to ensure it is profitable, scalable, and investment-ready.</p>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
+                            <div class="w-12 h-12 mx-auto bg-purple-500/10 rounded-full flex items-center justify-center text-purple-400 text-xl mb-4"><i class="fa-solid fa-bridge"></i></div>
+                            <h3 class="text-lg font-bold text-white mb-2">The Bridge</h3>
+                            <p class="text-slate-400 text-sm">Operating from Lille, we are the regulatory and commercial link between European enterprises and African scale-ups.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== SERVICES PAGE ==================== -->
+        <div id="services" class="page-section">
+            <section class="py-24 bg-slate-950">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold font-heading mb-4">Service Architecture</h2>
+                        <p class="text-slate-400 max-w-2xl mx-auto">We do not sell hours. We sell outcomes, access, and signed agreements.</p>
+                    </div>
+
+                    <!-- Pillar 1 -->
+                    <div class="grid md:grid-cols-2 gap-12 mb-24 items-center">
+                        <div>
+                            <span class="text-brand-cyan font-bold tracking-widest text-xs uppercase mb-2 block">Pillar 1: Strategy</span>
+                            <h3 class="text-3xl font-bold text-white mb-4">The Alliance</h3>
+                            <p class="text-slate-400 mb-6 leading-relaxed">
+                                Clients often waste time chasing partners who have no commercial incentive to sign. We fix this by mapping the ecosystem to identify "Node" companies—organisations that hold the trust of your future customers.
+                            </p>
+                            <ul class="space-y-3 text-slate-300">
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-brand-cyan mt-1"></i> <strong>Ecosystem Mapping:</strong> Identifying high-leverage partners.</li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-brand-cyan mt-1"></i> <strong>Commercial Viability:</strong> Financial modelling of the deal.</li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-brand-cyan mt-1"></i> <strong>Due Diligence:</strong> Regulatory & reputational checks.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 h-full flex items-center justify-center">
+                            <i class="fa-solid fa-chess-board text-8xl text-brand-cyan/20"></i>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="grid md:grid-cols-2 gap-12 mb-24 items-center">
+                        <div class="order-2 md:order-1 bg-slate-900 p-8 rounded-3xl border border-slate-800 h-full flex items-center justify-center">
+                            <i class="fa-solid fa-file-signature text-8xl text-brand-green/20"></i>
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <span class="text-brand-green font-bold tracking-widest text-xs uppercase mb-2 block">Pillar 2: Execution</span>
+                            <h3 class="text-3xl font-bold text-white mb-4">The Deal</h3>
+                            <p class="text-slate-400 mb-6 leading-relaxed">
+                                Sales teams oversell; lawyers kill deals. We bridge the gap. We act as your Lead Negotiator to draft, redline, and close the partnership agreement.
+                            </p>
+                            <ul class="space-y-3 text-slate-300">
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-brand-green mt-1"></i> <strong>Negotiation:</strong> Direct engagement with stakeholders.</li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-brand-green mt-1"></i> <strong>Legal Drafting:</strong> MOUs, SLAs, and Data Agreements.</li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-brand-green mt-1"></i> <strong>Compliance:</strong> GDPR & Cross-border structuring.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span class="text-purple-400 font-bold tracking-widest text-xs uppercase mb-2 block">Pillar 3: Expansion</span>
+                            <h3 class="text-3xl font-bold text-white mb-4">The Bridge</h3>
+                            <p class="text-slate-400 mb-6 leading-relaxed">
+                                Facilitating the specific Europe-Africa corridor. We act as your Fractional HQ in the target market, handling the regulatory friction so you can focus on scale.
+                            </p>
+                            <div class="grid grid-cols-1 gap-4 mt-6">
+                                <div class="bg-slate-900 p-4 rounded-xl border-l-4 border-brand-green">
+                                    <h4 class="font-bold text-white">Nigeria Access Program</h4>
+                                    <p class="text-xs text-slate-400">For European Tech entering Africa via strategic banking/telco alliances.</p>
+                                </div>
+                                <div class="bg-slate-900 p-4 rounded-xl border-l-4 border-brand-cyan">
+                                    <h4 class="font-bold text-white">Europe Launchpad</h4>
+                                    <p class="text-xs text-slate-400">For African Fintechs needing a compliant European footprint and hard currency revenue.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 h-full flex items-center justify-center">
+                            <i class="fa-solid fa-globe text-8xl text-purple-500/20"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== ABOUT PAGE ==================== -->
+        <div id="about" class="page-section">
+            <section class="py-24 bg-slate-950">
+                <div class="max-w-5xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row gap-12 items-center">
+                        <div class="md:w-1/3">
+                            <div class="relative group">
+                                <div class="absolute -inset-4 bg-gradient-to-tr from-brand-cyan to-brand-green rounded-full opacity-20 blur-2xl group-hover:opacity-30 transition-opacity"></div>
+                                <!-- Icon/Placeholder for Partner -->
+                                <div class="relative rounded-2xl border-2 border-slate-700 bg-slate-900 w-full aspect-square flex items-center justify-center shadow-2xl">
+                                    <i class="fa-solid fa-user-tie text-9xl text-slate-700"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-6 font-heading">High-Leverage Strategic Partner</h1>
+                            <p class="text-xl text-slate-400 mb-6 leading-relaxed font-light">
+                                I am a **Lawyer and Commercial Strategist** with over a decade of professional experience. I combine regulatory precision with commercial foresight to build growth engines that actually scale.
+                            </p>
+                            <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                                Most consultants provide advice that dies in a PDF. I work differently. I understand the compliance rigour required in European markets (GDPR) and the operational agility needed to succeed in emerging African markets like Nigeria.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
+                                    <div class="text-brand-cyan font-bold mb-1">Legal Rigour</div>
+                                    <div class="text-xs text-slate-500">Deal Structuring & Compliance</div>
+                                </div>
+                                <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
+                                    <div class="text-brand-green font-bold mb-1">Commercial Strategy</div>
+                                    <div class="text-xs text-slate-500">Business Modeling & Economics</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-center text-slate-600 text-xs tracking-[0.2em] uppercase font-bold">
+        <p>&copy; 2025 Scalable Growth Systems. Paris • Lille • Lagos.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('nav button').forEach(el => el.classList.remove('nav-active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            document.getElementById('nav-' + pageId).classList.add('nav-active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

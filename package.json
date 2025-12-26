@@ -1,0 +1,17 @@
+{
+  "name": "scalable-growth-systems",
+  "version": "1.0.0",
+  "description": "Marketing site for Scalable Growth Systems",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx live-server --port=3000",
+    "deploy:vercel": "vercel --prod"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "live-server": "^1.2.2"
+  }
+}
