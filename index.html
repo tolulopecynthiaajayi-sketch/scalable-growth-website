@@ -87,6 +87,23 @@
                 Book Discovery Call
             </a>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden absolute right-6 top-1/2 -translate-y-1/2 p-2 text-slate-300 hover:text-white"
+            onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 p-6 flex-col gap-6 items-center shadow-2xl transition-all duration-300">
+            <button onclick="showPage('home'); toggleMobileMenu()"
+                class="text-lg font-medium text-slate-300 hover:text-brand-cyan tracking-widest uppercase">Home</button>
+            <button onclick="showPage('services'); toggleMobileMenu()"
+                class="text-lg font-medium text-slate-300 hover:text-brand-cyan tracking-widest uppercase">Services</button>
+            <button onclick="showPage('about'); toggleMobileMenu()"
+                class="text-lg font-medium text-slate-300 hover:text-brand-cyan tracking-widest uppercase">About</button>
+        </div>
     </nav>
 
     <!-- MAIN CONTENT CONTAINER -->
@@ -345,9 +362,16 @@
             // Show selected page
             document.getElementById(pageId).classList.add('active');
             document.getElementById('nav-' + pageId).classList.add('nav-active');
-
-            // Scroll to top
             window.scrollTo(0, 0);
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        }
+        // Scroll to top
+        window.scrollTo(0, 0);
         }
     </script>
 </body>
