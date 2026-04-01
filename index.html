@@ -29,6 +29,282 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0B1D56; /* The 60% Midnight Blue */
+            color: #ffffff;
+        }
+
+        .font-heading {
+            font-family: 'Inter', 'Outfit', sans-serif;
+        }
+
+        .nav-active {
+            color: #ffffff !important;
+        }
+
+        /* Hide sections by default, show active */
+        .page-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased flex flex-col min-h-screen border-t-4 border-cyan-400">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#0B1D56]/95 backdrop-blur-md border-b border-white/10 mt-1">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="cursor-pointer" onclick="showPage('home')">
+                <img src="./assets/logo.png" alt="Cynthia Ajayi Global Consulting" class="h-12 w-auto brightness-200">
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400 uppercase tracking-widest">
+                <button onclick="showPage('home')" id="nav-home"
+                    class="hover:text-white transition-colors nav-active">Home</button>
+                <button onclick="showPage('services')" id="nav-services"
+                    class="hover:text-white transition-colors">Services</button>
+                <button onclick="showPage('about')" id="nav-about"
+                    class="hover:text-white transition-colors">About</button>
+            </div>
+            <a href="mailto:cynthia.a@laniajayi.com"
+                class="hidden md:block bg-cyan-400 hover:bg-cyan-300 text-[#0B1D56] font-bold py-2.5 px-6 rounded-full transition-all text-sm shadow-md shadow-cyan-500/20">
+                Book a 15-Minute Diagnostic Call
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden absolute right-6 top-1/2 -translate-y-1/2 p-2 text-slate-300 hover:text-white"
+            onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-[#0B1D56]/95 backdrop-blur-xl border-b border-white/10 p-6 flex-col gap-6 items-center shadow-2xl transition-all duration-300">
+            <button onclick="showPage('home'); toggleMobileMenu()"
+                class="text-lg font-medium text-slate-400 hover:text-white tracking-widest uppercase">Home</button>
+            <button onclick="showPage('services'); toggleMobileMenu()"
+                class="text-lg font-medium text-slate-400 hover:text-white tracking-widest uppercase">Services</button>
+            <button onclick="showPage('about'); toggleMobileMenu()"
+                class="text-lg font-medium text-slate-400 hover:text-white tracking-widest uppercase mb-4">About</button>
+            <a href="mailto:cynthia.a@laniajayi.com" onclick="toggleMobileMenu()"
+                class="bg-cyan-400 hover:bg-cyan-300 text-[#0B1D56] font-bold py-3 px-8 rounded-full transition-all text-sm shadow-cyan-500/20 shadow-lg text-center">
+                Book a 15-Minute<br>Diagnostic Call
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow pt-20">
+
+        <!-- ==================== HOME PAGE ==================== -->
+        <div id="home" class="page-section active">
+            <!-- Hero Section -->
+            <header class="relative pt-24 pb-32 lg:pt-32 lg:pb-40 overflow-hidden bg-[#0B1D56]">
+                <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+                    <div class="inline-block mb-6 px-4 py-1.5 rounded-full border border-slate-600 bg-white/5 text-xs font-bold tracking-[0.2em] text-slate-300 uppercase">
+                        Fractional Commercial Lead
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-[1.1] tracking-tight text-white font-heading">
+                        Scaling your commercial infrastructure and unlocking global distribution.
+                    </h1>
+                    <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                        We build the commercial machinery, structure the enterprise deals, and engineer the strategic partnerships that allow tech platforms to scale without breaking.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                        <a href="mailto:cynthia.a@laniajayi.com"
+                            class="bg-cyan-400 text-[#0B1D56] hover:bg-cyan-300 font-bold py-4 px-10 rounded-full transition-all shadow-lg shadow-cyan-500/20 text-lg">
+                            Book a 15-Minute Diagnostic Call
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Why Founders Call Me -->
+            <section class="relative py-32 bg-[#0B1D56] text-white overflow-hidden border-t-2 border-cyan-400">
+                <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold font-heading mb-10 text-white">Why Founders Call Me</h2>
+                    <div class="text-xl text-slate-300 space-y-8 leading-relaxed font-light text-left md:text-center mx-auto max-w-4xl">
+                        <p>Founders usually call me when they’ve hit a <strong>"bandwidth wall."</strong> You have the tech and the traction, but you’re suddenly drowning in the business side—negotiating with enterprise legal teams, figuring out cross-border rules, or trying to turn a handshake into a signed contract.</p>
+                        <p>With a background in both Business Operations and Law, I step in to handle that side of the house. I’m not just an advisor; I’m a <strong class="text-white font-bold">senior operator</strong> who knows how to navigate the "messy middle" of scaling a company so you can get back to building the product.</p>
+                    </div>
+                    <div class="mt-12">
+                         <button onclick="showPage('services')"
+                            class="border border-slate-600 text-white hover:bg-white hover:text-[#0B1D56] font-bold py-4 px-10 rounded-full transition-all text-lg tracking-wide">
+                            Explore How I Step In
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== SERVICES PAGE ==================== -->
+        <div id="services" class="page-section">
+            <!-- Core Services -->
+            <section class="py-24 bg-[#0B1D56] relative">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-6xl font-bold font-heading text-white mb-6">The Fractional Commercial Lead</h2>
+                        <p class="text-xl text-slate-400 max-w-3xl mx-auto font-medium">High-level seniority, without the full-time burn.</p>
+                    </div>
+                    
+                    <p class="text-lg text-slate-300 max-w-4xl mx-auto mb-20 leading-relaxed text-center font-light">
+                        For high-growth scale-ups, I don't just advise—I step in. I act as a Fractional Commercial & Legal Lead on your leadership team (typically 1 to 2 days a week) for a flat monthly retainer. This gives you the senior expertise you need without the overhead of a full-time C-suite hire.
+                        <br><br><strong class="text-white font-semibold">When I plug into your company, I take ownership of the commercial machinery:</strong>
+                    </p>
+
+                    <!-- 3 Pillar Grid -->
+                    <div class="grid md:grid-cols-3 gap-8 mb-24">
+                        <!-- Pillar 1 -->
+                        <div class="bg-[#132A75] rounded-2xl p-10 border border-white/5 shadow-xl hover:shadow-2xl transition-shadow group flex flex-col h-full">
+                            <h3 class="text-2xl font-bold text-white mb-3">Enterprise Sales & Partnerships</h3>
+                            <p class="text-slate-400 font-bold text-xs uppercase tracking-widest mb-6">(Driving Revenue)</p>
+                            <p class="text-slate-300 mb-8 text-base">I take over the commercial pipeline to turn your tech into signed B2B contracts.</p>
+                            
+                            <ul class="space-y-5 text-slate-300 text-sm mt-auto">
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Target Mapping:</strong> Identifying the institutional partners and enterprise clients that actually have the budget to deploy your software.</div></li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Drafting Proposals:</strong> Writing the business cases and enterprise pitch decks that translate your tech into a "must-have" for corporate procurement teams.</div></li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Leading the Pitch:</strong> Handling the high-level Zoom calls and negotiations, pitching the commercial value, and handling objections.</div></li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Building the Pricing Model:</strong> Calculating unit economics to ensure the deals we structure are commercially profitable and make sense for your runway.</div></li>
+                            </ul>
+                        </div>
+
+                        <!-- Pillar 2 -->
+                        <div class="bg-[#132A75] rounded-2xl p-10 border border-white/5 shadow-xl hover:shadow-2xl transition-shadow group flex flex-col h-full">
+                            <h3 class="text-2xl font-bold text-white mb-3">Commercial Contracting</h3>
+                            <p class="text-slate-400 font-bold text-xs uppercase tracking-widest mb-6">(The Protective Railings)</p>
+                            <p class="text-slate-300 mb-8 text-base">A deal isn’t done until the contract is signed. I ensure those contracts protect you without killing the momentum.</p>
+                            
+                            <ul class="space-y-5 text-slate-300 text-sm mt-auto">
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Drafting Practical SLAs:</strong> Writing the commercial terms that define exactly what you guarantee to deliver, and strictly limiting your liability where you don't.</div></li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Managing External Counsel:</strong> I act as the "translator" between you and external law firms, ensuring you get the specific regulatory sign-off you need without the massive billable hours.</div></li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Negotiating Redlines:</strong> Handling the back-and-forth with enterprise legal teams to find the middle ground that actually gets the deal signed.</div></li>
+                            </ul>
+                        </div>
+
+                        <!-- Pillar 3 -->
+                        <div class="bg-[#132A75] rounded-2xl p-10 border border-white/5 shadow-xl hover:shadow-2xl transition-shadow group flex flex-col h-full">
+                            <h3 class="text-2xl font-bold text-white mb-3">Investment Readiness & Scale</h3>
+                            <p class="text-slate-400 font-bold text-xs uppercase tracking-widest mb-6">(Securing the Cash)</p>
+                            <p class="text-slate-300 mb-8 text-base">I ensure your internal operations are ready for the scrutiny of major investors and grant bodies.</p>
+                            
+                            <ul class="space-y-5 text-slate-300 text-sm mt-auto">
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Milestone Tracking:</strong> Ensuring your commercial strategy aligns perfectly with the targets required to unlock your next tranche of grant funding.</div></li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Building the Data Room:</strong> Organising your share agreements, IP assignments, and commercial contracts into a secure, "due-diligence-ready" state for VCs.</div></li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> <div><strong class="text-white">Co-Piloting Investor Calls:</strong> Joining the conversation with VCs to speak the language of customer acquisition cost (CAC), lifetime value (LTV), and commercial risk.</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expansion Bridge -->
+            <section class="py-24 bg-[#0B1D56] border-t-2 border-cyan-400">
+                <div class="max-w-6xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row gap-16 items-center">
+                        <div class="md:w-1/2">
+                            <div class="rounded-3xl border border-white/10 bg-[#132A75] overflow-hidden shadow-2xl">
+                                <img src="./assets/service-expansion.png" alt="Expansion Bridge" class="w-full h-auto object-cover opacity-80">
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <span class="text-slate-400 font-bold tracking-widest text-xs uppercase mb-3 block">Global Access</span>
+                            <h3 class="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">The Expansion Bridge</h3>
+                            <p class="text-slate-300 mb-8 leading-relaxed text-lg font-light">
+                                For clients crossing borders (Europe <i class="fa-solid fa-arrow-right-arrow-left text-xs mx-1 text-cyan-400"></i> Africa), we handle the regulatory entry and local compliance infrastructure.
+                            </p>
+                            <div class="grid grid-cols-1 gap-5 mt-6">
+                                <div class="bg-[#132A75] p-6 rounded-xl border border-white/5 shadow-sm hover:shadow-md transition-shadow">
+                                    <h4 class="font-bold text-white text-lg"><i class="fa-solid fa-check text-cyan-400 mr-2 text-sm"></i> Nigeria Access Programme</h4>
+                                    <p class="text-sm text-slate-300 mt-2 leading-relaxed ml-6">For European Tech entering Africa via strategic banking/telco alliances.</p>
+                                </div>
+                                <div class="bg-[#132A75] p-6 rounded-xl border border-white/5 shadow-sm hover:shadow-md transition-shadow">
+                                    <h4 class="font-bold text-white text-lg"><i class="fa-solid fa-check text-cyan-400 mr-2 text-sm"></i> Europe Launchpad</h4>
+                                    <p class="text-sm text-slate-300 mt-2 leading-relaxed ml-6">For African Fintechs needing a compliant European footprint and hard currency revenue.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== ABOUT PAGE ==================== -->
+        <div id="about" class="page-section">
+            <section class="py-24 bg-[#0B1D56] relative border-t-2 border-cyan-400">
+                <div class="max-w-6xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row gap-16 items-center">
+                        <div class="md:w-5/12">
+                            <div class="relative group">
+                                <div class="relative rounded-3xl border border-white/10 bg-[#132A75] w-full aspect-[4/5] overflow-hidden shadow-2xl">
+                                    <img src="./assets/about-bridge.png" alt="Strategic Advice" class="w-full h-full object-cover opacity-90">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-7/12">
+                            <h1 class="text-5xl font-bold mb-3 text-white font-heading">Meet the Founder</h1>
+                            <h2 class="text-xl text-slate-300 font-medium mb-8">Cynthia Ajayi | Fractional Commercial Lead & Deal Architect</h2>
+                            
+                            <div class="text-slate-300 space-y-6 leading-relaxed text-lg font-light">
+                                <p><strong class="text-white font-medium">Cynthia Ajayi is a Commercial Strategist, Legal Operator, and Fractional Lead who builds the internal machinery for high-growth tech platforms.</strong></p>
+                                
+                                <p>With a career spanning over 7 years in legal and business operations, Cynthia’s expertise lies at the intersection of commercial scaling and risk management. Holding an MBA and called to the Nigerian Bar, Cynthia has a proven track record of architecting deals, building commercial contracts, and leading successful fundraising initiatives.</p>
+                                
+                                <p>Cynthia's cross-sector experience is highly diverse, having structured commercial operations for fintechs, mobility companies, and scaling SMBs. Beyond the private sector, Cynthia has operated at the highest levels of institutional partnerships, consulting with government agencies and leading initiatives in partnership with the Netherlands Embassy in Nigeria.</p>
+                                
+                                <p>Today, operating as a Fractional Commercial Lead out of the Lille tech hub in France, Cynthia leverages this wealth of experience to help technical founders bridge the gap between building a great product and executing a profitable, legally sound commercial strategy.</p>
+                            </div>
+                            
+                            <div class="mt-12">
+                                <a href="mailto:cynthia.a@laniajayi.com"
+                                    class="inline-block bg-cyan-400 text-[#0B1D56] hover:bg-cyan-300 font-bold py-4 px-10 rounded-full transition-all shadow-lg text-lg">
+                                    Book a 15-Minute Diagnostic Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 text-center text-slate-300 relative overflow-hidden" style="background-color: #0B1D56;">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">Ready to scale without breaking?</h2>
+            <p class="text-xl mb-12 max-w-2xl mx-auto font-light text-slate-300">Bridge the execution gap with a senior operator running your commercial machinery.</p>
+            <a href="mailto:cynthia.a@laniajayi.com"
+                class="inline-block bg-cyan-400 text-[#0B1D56] hover:bg-cyan-300 font-bold py-4 px-12 rounded-full transition-all shadow-xl text-lg mb-20 tracking-wide">
+                Book a 15-Minute Diagnostic Call
+            </a>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest uppercase text-slate-400">
+                <p>&copy; 2026 Oluwalani Ajayi Global Consulting Ltd.</p>
+                <div class="mt-4 md:mt-0 flex gap-6">
+                    <span>Lille, France</span>
+                    <span class="text-slate-500">•</span>
+                    <span>Global Impact</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #ffffff;
             color: #1e293b;
         }
