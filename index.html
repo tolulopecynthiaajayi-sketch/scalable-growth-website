@@ -235,6 +235,15 @@
             background-repeat: no-repeat;
         }
 
+        @media (max-width: 640px) {
+            .hero-bg-container {
+                background-image: linear-gradient(to bottom, #FAF9F5 0%, rgba(250, 249, 245, 0.88) 25%, rgba(250, 249, 245, 0.88) 75%, #FAF9F5 100%), url('./assets/hero_organic_tree_clean.png');
+                background-size: 165%;
+                background-position: center 20%;
+                background-repeat: no-repeat;
+            }
+        }
+
         .faq-icon {
             transition: transform 0.3s ease;
         }
@@ -312,19 +321,19 @@
         <!-- ==================== HOME PAGE ==================== -->
         <div id="home" class="page-section active">
             <!-- Hero Section with Tree Artwork Background -->
-            <section class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden hero-bg-container border-b border-slate-200/60">
+            <section class="relative pt-8 pb-12 sm:pt-20 sm:pb-24 overflow-hidden hero-bg-container border-b border-slate-200/60">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center relative z-10">
                     
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.18] sm:leading-[1.12] tracking-tight font-heading mb-4 sm:mb-6 max-w-3xl mx-auto">
+                    <h1 class="text-[1.65rem] xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.2] sm:leading-[1.12] tracking-tight font-heading mb-4 sm:mb-6 max-w-3xl mx-auto">
                         Strategic Legal & Operations Partner for <span class="text-terracotta-500 underline decoration-terracotta-400/30 underline-offset-8">Global Founders</span>
                     </h1>
                     
-                    <p class="text-base sm:text-xl text-slate-700 mb-8 sm:mb-10 leading-relaxed font-normal max-w-2xl mx-auto">
+                    <p class="text-sm sm:text-xl text-slate-700 mb-6 sm:mb-10 leading-relaxed font-normal max-w-2xl mx-auto">
                         We build the sustainable commercial frameworks and legal infrastructure global companies need to scale without friction.
                     </p>
 
                     <!-- CTA Row -->
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-center w-full max-w-sm sm:max-w-none mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-center w-full max-w-xs sm:max-w-none mx-auto">
                         <a href="https://calendar.app.google/iwe8TguZSCSdSKu66" target="_blank" rel="noopener noreferrer"
                             class="cta-btn-primary font-bold py-3.5 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base flex items-center justify-center gap-3 shadow-lg w-full sm:w-auto text-center">
                             <span>Book a Call</span>
