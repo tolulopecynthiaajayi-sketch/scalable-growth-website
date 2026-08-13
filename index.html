@@ -244,7 +244,7 @@
 <body class="antialiased flex flex-col min-h-screen bg-[#FAF9F5] text-slate-900 selection:bg-terracotta-400 selection:text-white">
 
     <!-- Header / Navigation -->
-    <header class="fixed w-full z-50 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <header class="fixed w-full z-50 bg-[#F2ECE1]/95 backdrop-blur-md border-b border-slate-300 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="javascript:void(0)" onclick="showPage('home')" class="flex items-center gap-3 group">
@@ -252,11 +252,12 @@
             </a>
 
             <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex gap-9 text-sm font-medium text-slate-600 tracking-wide">
+            <nav class="hidden md:flex gap-7 text-sm font-medium text-slate-600 tracking-wide">
                 <button onclick="showPage('home')" id="nav-home" class="nav-link nav-active hover:text-slate-900 py-1">Home</button>
                 <button onclick="showPage('services')" id="nav-services" class="nav-link hover:text-slate-900 py-1">Service Pillars</button>
                 <button onclick="showPage('pricing')" id="nav-pricing" class="nav-link hover:text-slate-900 py-1">Pricing & Packages</button>
-                <button onclick="showPage('about')" id="nav-about" class="nav-link hover:text-slate-900 py-1">About</button>
+                <button onclick="showPage('about-company')" id="nav-about-company" class="nav-link hover:text-slate-900 py-1">About the Company</button>
+                <button onclick="showPage('our-team')" id="nav-our-team" class="nav-link hover:text-slate-900 py-1">Our Team</button>
             </nav>
 
             <!-- Desktop CTA -->
@@ -279,7 +280,8 @@
             <button onclick="showPage('home'); toggleMobileMenu()" class="text-left font-medium text-slate-800 text-lg py-1 border-b border-slate-100">Home</button>
             <button onclick="showPage('services'); toggleMobileMenu()" class="text-left font-medium text-slate-800 text-lg py-1 border-b border-slate-100">Service Pillars</button>
             <button onclick="showPage('pricing'); toggleMobileMenu()" class="text-left font-medium text-slate-800 text-lg py-1 border-b border-slate-100">Pricing & Packages</button>
-            <button onclick="showPage('about'); toggleMobileMenu()" class="text-left font-medium text-slate-800 text-lg py-1 border-b border-slate-100">About</button>
+            <button onclick="showPage('about-company'); toggleMobileMenu()" class="text-left font-medium text-slate-800 text-lg py-1 border-b border-slate-100">About the Company</button>
+            <button onclick="showPage('our-team'); toggleMobileMenu()" class="text-left font-medium text-slate-800 text-lg py-1 border-b border-slate-100">Our Team</button>
             
             <a href="https://calendar.app.google/iwe8TguZSCSdSKu66" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu()"
                 class="cta-btn-primary font-semibold py-3 px-6 rounded-full text-center text-sm shadow-md mt-2 flex items-center justify-center gap-2">
@@ -296,45 +298,27 @@
         <div id="home" class="page-section active">
             <!-- Hero Section with Tree Artwork Background -->
             <section class="relative pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden hero-bg-container border-b border-slate-200/60">
-                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="max-w-4xl mx-auto px-6 text-center flex flex-col items-center justify-center relative z-10">
                     
-                    <div class="lg:col-span-8">
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.12] tracking-tight font-heading mb-6">
-                            Strategic Legal & Operations Partner for <span class="text-terracotta-500 underline decoration-terracotta-400/30 underline-offset-8">Global Founders</span>
-                        </h1>
-                        
-                        <p class="text-lg sm:text-xl text-slate-700 mb-8 leading-relaxed font-normal max-w-2xl">
-                            I build the sustainable commercial frameworks and legal infrastructure global companies need to scale without friction.
-                        </p>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.12] tracking-tight font-heading mb-6 max-w-3xl mx-auto">
+                        Strategic Legal & Operations Partner for <span class="text-terracotta-500 underline decoration-terracotta-400/30 underline-offset-8">Global Founders</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-700 mb-10 leading-relaxed font-normal max-w-2xl mx-auto">
+                        We build the sustainable commercial frameworks and legal infrastructure global companies need to scale without friction.
+                    </p>
 
-                        <!-- CTA Row -->
-                        <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-12">
-                            <a href="https://calendar.app.google/iwe8TguZSCSdSKu66" target="_blank" rel="noopener noreferrer"
-                                class="cta-btn-primary font-bold py-4 px-8 rounded-full text-base flex items-center justify-center gap-3 shadow-lg">
-                                <span>Book a Call</span>
-                                <i class="fa-solid fa-arrow-right text-sm"></i>
-                            </a>
-                            <button onclick="showPage('pricing')"
-                                class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold py-4 px-8 rounded-full text-base transition-all text-center">
-                                View Pricing & Packages
-                            </button>
-                        </div>
-
-                        <!-- Credentials & Authority Bar -->
-                        <div class="pt-8 border-t border-slate-300/80 grid grid-cols-3 gap-4 text-slate-700">
-                            <div>
-                                <p class="text-2xl lg:text-3xl font-extrabold text-slate-900 font-heading">7+ Years</p>
-                                <p class="text-xs sm:text-sm text-slate-600 font-medium">Professional Experience</p>
-                            </div>
-                            <div>
-                                <p class="text-2xl lg:text-3xl font-extrabold text-sage-600 font-heading">Dual Creds</p>
-                                <p class="text-xs sm:text-sm text-slate-600 font-medium">MBA & Law Background</p>
-                            </div>
-                            <div>
-                                <p class="text-2xl lg:text-3xl font-extrabold text-terracotta-500 font-heading">Global Reach</p>
-                                <p class="text-xs sm:text-sm text-slate-600 font-medium">European Hub (Lille, France)</p>
-                            </div>
-                        </div>
+                    <!-- CTA Row -->
+                    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                        <a href="https://calendar.app.google/iwe8TguZSCSdSKu66" target="_blank" rel="noopener noreferrer"
+                            class="cta-btn-primary font-bold py-4 px-8 rounded-full text-base flex items-center justify-center gap-3 shadow-lg">
+                            <span>Book a Call</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <button onclick="showPage('pricing')"
+                            class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold py-4 px-8 rounded-full text-base transition-all text-center shadow-sm">
+                            View Pricing & Packages
+                        </button>
                     </div>
 
                 </div>
@@ -594,7 +578,7 @@
                                         </div>
                                     </button>
                                     <div id="faq-content-1" class="faq-content hidden px-6 pb-6 pt-2 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 bg-[#FAF9F5]/50">
-                                        An external law firm typically provides reactive legal advice on an hourly basis. As a fractional operator, I integrate directly into your leadership team to proactively drive commercial execution, manage external counsel, and build sustainable internal frameworks.
+                                        An external law firm typically provides reactive legal advice on an hourly basis. As a fractional operator, we integrate directly into your leadership team to proactively drive commercial execution, manage external counsel, and build sustainable internal frameworks.
                                     </div>
                                 </div>
 
@@ -607,7 +591,7 @@
                                         </div>
                                     </button>
                                     <div id="faq-content-2" class="faq-content hidden px-6 pb-6 pt-2 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 bg-[#FAF9F5]/50">
-                                        I build global-first frameworks designed for cross-border scalability, ensuring your commercial agreements and operational structures are resilient as you expand internationally.
+                                        We build global-first frameworks designed for cross-border scalability, ensuring your commercial agreements and operational structures are resilient as you expand internationally.
                                     </div>
                                 </div>
 
@@ -881,48 +865,148 @@
             </section>
         </div>
 
-        <!-- ==================== ABOUT PAGE ==================== -->
-        <div id="about" class="page-section">
+        <!-- ==================== ABOUT THE COMPANY PAGE ==================== -->
+        <div id="about-company" class="page-section">
+            <section class="py-16 lg:py-24 bg-[#FAF9F5]">
+                <div class="max-w-7xl mx-auto px-6">
+                    
+                    <!-- Header -->
+                    <div class="max-w-3xl mb-16">
+                        <span class="text-terracotta-500 font-bold tracking-widest text-xs uppercase mb-2 block">Institutional Advisory</span>
+                        <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900 mb-4">Building the Foundation for Global Ambition</h1>
+                    </div>
+
+                    <!-- Firm's Mission Grid -->
+                    <div class="grid lg:grid-cols-12 gap-12 items-center mb-20">
+                        <div class="lg:col-span-7 space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed">
+                            <p class="font-semibold text-slate-900 text-lg sm:text-xl leading-relaxed border-l-4 border-sage-500 pl-4 bg-white p-5 rounded-r-xl shadow-sm">
+                                Oluwalani Ajayi Global Consulting Limited (LaniAjayi) is a boutique legal and operations advisory firm serving early-stage founders and high-growth technology companies. We exist to solve the bottleneck of the "messy middle", the critical phase where rapid commercial growth outpaces internal infrastructure.
+                            </p>
+                            <p>
+                                Too many startups fail to scale not for a lack of ambition, but because growth is approached without structure. We bridge the gap between strategy and execution, delivering the operational scaffolding and legal rigour required to scale sustainably.
+                            </p>
+                            <div class="pt-4 flex flex-wrap gap-4">
+                                <a href="https://calendar.app.google/iwe8TguZSCSdSKu66" target="_blank" class="cta-btn-primary font-bold py-3.5 px-8 rounded-full text-sm inline-flex items-center gap-2 shadow-md">
+                                    <span>Book a Call</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                </a>
+                                <button onclick="showPage('our-team')" class="cta-btn-secondary font-bold py-3.5 px-8 rounded-full text-sm inline-flex items-center gap-2 shadow-md">
+                                    <span>Meet Our Team</span>
+                                    <i class="fa-solid fa-user-group text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5">
+                            <div class="relative rounded-3xl bg-white p-3 border border-slate-200 shadow-xl overflow-hidden">
+                                <img src="./assets/conceptual_structure.png" alt="Structural Precision & Global Ambition" class="w-full h-auto rounded-2xl object-cover">
+                                <div class="mt-3 p-4 bg-alabaster-100 rounded-xl border border-slate-200/80">
+                                    <p class="text-xs font-bold uppercase tracking-wider text-slate-400">LaniAjayi</p>
+                                    <p class="text-sm font-semibold text-slate-800">Oluwalani Ajayi Global Consulting Limited</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Philosophy Grid -->
+                    <div class="pt-16 border-t border-slate-200">
+                        <div class="text-center max-w-3xl mx-auto mb-12">
+                            <span class="text-sage-600 font-bold tracking-widest text-xs uppercase mb-2 block">Guiding Principles</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 mb-3">Our Core Philosophy</h2>
+                            <p class="text-slate-600 text-sm sm:text-base">Built on structural clarity, institutional discipline, and transparent value delivery.</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <!-- Principle 1 -->
+                            <div class="bg-white p-8 rounded-2xl border border-slate-200/90 shadow-sm card-hover flex flex-col justify-between">
+                                <div>
+                                    <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-600 flex items-center justify-center text-xl mb-5 font-bold">
+                                        <i class="fa-solid fa-diagram-project"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-slate-900 mb-3 font-heading">Engineered for Growth</h3>
+                                    <p class="text-slate-600 text-sm leading-relaxed">
+                                        We believe that commercial operations should accelerate growth, not hinder it with unnecessary corporate bureaucracy.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Principle 2 -->
+                            <div class="bg-white p-8 rounded-2xl border border-slate-200/90 shadow-sm card-hover flex flex-col justify-between">
+                                <div>
+                                    <div class="w-12 h-12 rounded-xl bg-terracotta-400/10 text-terracotta-500 flex items-center justify-center text-xl mb-5 font-bold">
+                                        <i class="fa-solid fa-building-columns"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-slate-900 mb-3 font-heading">Institutional Rigour</h3>
+                                    <p class="text-slate-600 text-sm leading-relaxed">
+                                        We build frameworks designed to withstand institutional due diligence, ensuring our clients are always investment-ready.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Principle 3 -->
+                            <div class="bg-white p-8 rounded-2xl border border-slate-200/90 shadow-sm card-hover flex flex-col justify-between">
+                                <div>
+                                    <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-xl mb-5 font-bold">
+                                        <i class="fa-solid fa-scale-balanced"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-slate-900 mb-3 font-heading">Transparent Execution</h3>
+                                    <p class="text-slate-600 text-sm leading-relaxed">
+                                        By productising our core outcomes, we eliminate the friction of traditional hourly legal billing, providing our clients with absolute clarity on deliverables and cost.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== OUR TEAM PAGE ==================== -->
+        <div id="our-team" class="page-section">
             <section class="py-16 lg:py-24 bg-[#FAF9F5]">
                 <div class="max-w-6xl mx-auto px-6">
                     
-                    <div class="grid md:grid-cols-12 gap-12 items-center mb-16">
+                    <div class="max-w-3xl mb-16">
+                        <span class="text-sage-600 font-bold tracking-widest text-xs uppercase mb-2 block">Leadership & Expertise</span>
+                        <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900">Our Team</h1>
+                    </div>
+
+                    <!-- Team Profile: Cynthia Ajayi -->
+                    <div class="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-sm grid md:grid-cols-12 gap-12 items-center">
                         
-                        <!-- Image / Graphic Column -->
+                        <!-- Portrait Column -->
                         <div class="md:col-span-5">
                             <div class="relative">
                                 <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-sage-500/20 to-terracotta-500/20 blur-lg"></div>
                                 <div class="relative rounded-3xl bg-white p-3 border border-slate-200 shadow-xl overflow-hidden">
-                                    <img src="./assets/about-bridge.png" alt="Cynthia Ajayi | LaniAjayi" class="w-full h-auto rounded-2xl object-cover">
+                                    <img src="./assets/about-bridge.png" alt="Cynthia Ajayi | Founder & Principal Operator" class="w-full h-auto rounded-2xl object-cover">
                                     <div class="mt-3 p-4 bg-alabaster-100 rounded-xl border border-slate-200/80">
                                         <p class="text-sm font-bold text-slate-900">Cynthia Ajayi</p>
-                                        <p class="text-xs text-slate-500">Legal & Operations Partner • Based in Lille, France</p>
+                                        <p class="text-xs text-terracotta-500 font-semibold">Founder & Principal Operator</p>
+                                        <p class="text-xs text-slate-500 mt-1">Based in Lille, France</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Bio / Copy Column -->
+                        <!-- Profile Content Column -->
                         <div class="md:col-span-7">
-                            <span class="text-sage-600 font-bold tracking-widest text-xs uppercase mb-2 block">About the Operator</span>
-                            <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900 mb-6">Meet Cynthia Ajayi</h1>
+                            <span class="px-3 py-1 bg-terracotta-400/10 text-terracotta-500 text-xs font-bold rounded-full mb-3 inline-block">Team Profile</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 mb-1">Cynthia Ajayi</h2>
+                            <p class="text-sage-600 font-bold text-sm mb-6 uppercase tracking-wider">Founder & Principal Operator</p>
 
-                            <!-- LinkedIn "About" Draft Integration -->
                             <div class="text-slate-700 space-y-5 leading-relaxed text-base">
-                                <blockquote class="p-4 bg-white border-l-4 border-terracotta-500 text-slate-800 font-medium italic text-lg rounded-r-xl shadow-sm mb-6">
-                                    “I operate at the intersection of legal rigour and business growth. With over seven years of professional experience, I’ve found that the best opportunities often sit in the messy middle—where strategy meets execution, and where regulation meets innovation.”
-                                </blockquote>
-
                                 <p>
-                                    I act as a strategic partner and legal advisor to global founders and high-growth companies. Whether it is structuring commercial contracts, ensuring investment readiness, or building foundational legal frameworks, I provide the scaffolding businesses need to scale sustainably.
+                                    Cynthia Ajayi is a strategic commercial operator and legal advisor dedicated to building sustainable frameworks for early-stage companies. With dual credentials as a qualified lawyer holding an LL.B degree from Joseph Ayo Babalola University, admission to the Bar of the Supreme Court of Nigeria via the Nigerian Law School, and a Master of Business Administration from IAE Lille, University School of Management, Lille, France, Cynthia brings over seven years of comprehensive professional experience to the firm.
                                 </p>
 
                                 <p>
-                                    Beyond the boardroom, I am deeply invested in mentorship, cultural diplomacy, prison advocacy, and community building. I believe in building systems that outlast the transaction.
+                                    Operating out of France, Cynthia integrates directly with global leadership teams to drive operational continuity and legal compliance. Rather than acting as a purely reactive external advisor, Cynthia functions as a fractional executive, managing day-to-day corporate governance, auditing accelerator residency agreements, executing share allotments, and structuring essential commercial Service Level Agreements (SLAs).
                                 </p>
 
-                                <p class="font-semibold text-slate-900 pt-2">
-                                    Based in Lille. Always open to connecting with builders and innovators.
+                                <p>
+                                    Beyond the boardroom, Cynthia is deeply committed to community building, cultural diplomacy, and prison advocacy, bringing a grounded, human-centric approach to high-stakes corporate execution.
                                 </p>
                             </div>
 
@@ -944,24 +1028,24 @@
 
                     </div>
 
-                    <!-- Credibility Credentials Grid -->
-                    <div class="grid sm:grid-cols-3 gap-6 pt-12 border-t border-slate-200">
+                    <!-- Academic & Credential Badges -->
+                    <div class="grid sm:grid-cols-3 gap-6 mt-16 pt-12 border-t border-slate-200">
                         <div class="bg-white p-6 rounded-2xl border border-slate-200">
-                            <h3 class="text-3xl font-extrabold text-slate-900 font-heading mb-1">7+ Years</h3>
-                            <p class="text-sm font-bold text-sage-600 mb-2">Track Record</p>
-                            <p class="text-xs text-slate-500 leading-relaxed">Deep operational and legal experience across B2B tech, fintech, mobility, and scaling SMBs.</p>
+                            <h3 class="text-2xl font-extrabold text-slate-900 font-heading mb-1">IAE Lille</h3>
+                            <p class="text-sm font-bold text-sage-600 mb-2">Master of Business Administration</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">University School of Management, Lille, France.</p>
                         </div>
 
                         <div class="bg-white p-6 rounded-2xl border border-slate-200">
-                            <h3 class="text-3xl font-extrabold text-slate-900 font-heading mb-1">Dual MBA & Law</h3>
-                            <p class="text-sm font-bold text-terracotta-500 mb-2">Academic & Legal Credentials</p>
-                            <p class="text-xs text-slate-500 leading-relaxed">Called to the Bar with an MBA, bridging contract law with unit economics and business runway.</p>
+                            <h3 class="text-2xl font-extrabold text-slate-900 font-heading mb-1">BL & LL.B</h3>
+                            <p class="text-sm font-bold text-terracotta-500 mb-2">Nigerian Law School & JABU</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">Called to the Bar (BL) with an LL.B degree from Joseph Ayo Babalola University.</p>
                         </div>
 
                         <div class="bg-white p-6 rounded-2xl border border-slate-200">
-                            <h3 class="text-3xl font-extrabold text-slate-900 font-heading mb-1">Lille Hub</h3>
-                            <p class="text-sm font-bold text-slate-700 mb-2">European & Global Base</p>
-                            <p class="text-xs text-slate-500 leading-relaxed">Operating out of France's tech ecosystem to help cross-border platforms access EU & global markets.</p>
+                            <h3 class="text-2xl font-extrabold text-slate-900 font-heading mb-1">7+ Years</h3>
+                            <p class="text-sm font-bold text-slate-700 mb-2">Fractional Executive</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">Integrating directly into leadership teams to drive operational continuity.</p>
                         </div>
                     </div>
 
